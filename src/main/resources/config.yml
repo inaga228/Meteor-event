@@ -1,0 +1,58 @@
+# MeteorEvent Configuration
+
+event:
+  # Интервал между автозапусками события (в секундах, 0 = отключено)
+  auto-start-interval: 600
+  # Радиус от спавна, в котором появится сундук
+  spawn-radius: 200
+  # Таймер до открытия сундука (в секундах)
+  chest-timer: 60
+  # Количество метеоритов за время таймера
+  meteor-count: 30
+  # Радиус падения метеоритов вокруг сундука
+  meteor-radius: 15
+  # Сила взрыва метеорита (0 = без разрушения блоков)
+  meteor-explosion-power: 2.5
+  # Сила финального взрыва сундука
+  final-explosion-power: 4.0
+
+loot:
+  # Минимальное количество предметов в сундуке
+  min-items: 3
+  # Максимальное количество предметов в сундуке
+  max-items: 6
+  items:
+    - type: DIAMOND
+      amount: 1
+      chance: 30
+    - type: EMERALD
+      amount: 2
+      chance: 40
+    - type: GOLDEN_APPLE
+      amount: 1
+      chance: 50
+    - type: IRON_INGOT
+      amount: 5
+      chance: 70
+    - type: GOLD_INGOT
+      amount: 3
+      chance: 60
+    - type: EXPERIENCE_BOTTLE
+      amount: 3
+      chance: 55
+    - type: NETHERITE_SCRAP
+      amount: 1
+      chance: 10
+    - type: ENCHANTED_BOOK
+      amount: 1
+      chance: 20
+
+messages:
+  event-start: "&6[&cМетеорит&6] &eМетеоритный ивент начался! Координаты сундука: &a{x}, {y}, {z}"
+  event-end: "&6[&cМетеорит&6] &eСундук открылся! Успейте забрать лут!"
+  event-stopped: "&6[&cМетеорит&6] &cИвент был остановлен администратором."
+  no-permission: "&cУ вас нет прав для этой команды."
+  usage: "&eИспользование: /meteorevent <start|stop|reload>"
+  already-running: "&cИвент уже запущен!"
+  not-running: "&cИвент не запущен!"
+  reloaded: "&aКонфиг перезагружен!"

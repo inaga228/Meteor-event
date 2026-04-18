@@ -1,0 +1,18 @@
+name: MeteorEvent
+version: 1.0.0
+main: ru.inaga228.meteorevent.MeteorEvent
+api-version: 1.16
+authors: [inaga228]
+description: Meteor Event Plugin - random chest with meteor shower
+
+commands:
+  meteorevent:
+    description: Start or stop meteor event
+    aliases: [me]
+    usage: /meteorevent <start|stop|reload>
+    permission: meteorevent.admin
+
+permissions:
+  meteorevent.admin:
+    description: Access to meteor event commands
+    default: op
