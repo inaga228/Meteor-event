@@ -275,7 +275,7 @@ public class EventManager {
             Location loc = new Location(world, x, y + 1, z);
             // Проверяем что не в воде и не в лаве
             if (loc.getBlock().getType() == Material.AIR
-                    && loc.clone().subtract(0, 1, 0).getBlock().isSolid()) {
+                    && loc.clone().subtract(0, 1, 0).getBlock().getType().isSolid()) {
                 return loc;
             }
         }

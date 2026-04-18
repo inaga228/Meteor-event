@@ -19,8 +19,8 @@ public class LootGenerator {
 
         for (Map<?, ?> item : items) {
             String typeStr = (String) item.get("type");
-            int amount = (int) item.getOrDefault("amount", 1);
-            int chance = (int) item.getOrDefault("chance", 50);
+            int amount = item.get("amount") != null ? ((Number) item.get("amount")).intValue() : 1;
+            int chance = item.get("chance") != null ? ((Number) item.get("chance")).intValue() : 50;
 
             if (random.nextInt(100) < chance) {
                 try {
